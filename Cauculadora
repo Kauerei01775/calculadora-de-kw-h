@@ -1,0 +1,20 @@
+# Cabeçalho do Programa
+print("CALCULADORA DE CONSUMO ENERGÉTICO")
+
+# Coleta de dados
+nome_dispositivo = input("Digite o nome do dispositivo: ")
+potencia_watts = float(input(f"Digite a potência de {nome_dispositivo} em Watts (W): "))
+horas_por_dia = float(input(f"Quantas horas por dia o {nome_dispositivo} fica ligado? "))
+
+# Cálculos
+# 1. Transformar Watts em kW (dividindo por 1000)
+# 2. Multiplicar pelas horas diárias e pelos 30 dias do mês
+consumo_diario_kwh = (potencia_watts / 1000) * horas_por_dia
+consumo_mensal_kwh = consumo_diario_kwh * 30
+
+# Exibição do Resultado
+print("\n" + "=" * 30)
+print(f"RESUMO DE CONSUMO: {nome_dispositivo.upper()}")
+print(f"Consumo Diário: {consumo_diario_kwh:.2f} kWh")
+print(f"Consumo Mensal (30 dias): {consumo_mensal_kwh:.2f} kWh")
+print("=" * 30)
